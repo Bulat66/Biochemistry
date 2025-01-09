@@ -12,10 +12,10 @@
 <a href="#glava1">Глава 1</a>
 
 </div>
-	<div style='font-display: Times New Roman; font-size: 14px; width: 500px; line-height: 120%;'>
+	<div style='margin: 0 auto; font-display: Times New Roman; font-size: 14px; width: 500px; line-height: 120%;'>
 		<center></center>
 		<b>&#0769</b>
-		<img src="pictures/picture.jpg" alt="">
+		<img src="#" alt="">
 		<table border="all" frame="box">
 
 		   <tr>
@@ -69,8 +69,12 @@
 <h3 style='text-align: center;'>6.23</h3>
 <div style='margin: 0 auto; width: 240px; '>
 	<p>Число:</p>
-	<div style='display: flex; justify-content: space-evenly; align-items: center;'><input type="text"><button>Квадрат</button><button>Куб</button></div>
-	<input type="text">
+	<div style='display: flex; justify-content: space-evenly; align-items: center;'>
+		<input id='olola' type="text">
+		<button onclick="kvadrat()">Квадрат</button>
+		<button onclick="cube()">Куб</button>
+	</div>
+	<input id='ululu' type="text">
 </div>
 <input id="num1" type='number'>
 <button>Прочитать</button>
@@ -84,71 +88,25 @@
 	function kva() {
 		var num1 = document.getElementById('num1').value;
 		var num1res = document.getElementById('num1res').value = num1 * num1;
-		// num1res.value = num1.value;
 	}
-if (c=='GCU') {a='Ala'}; if (c=='GCC') {a='Ala'};
+	function kvadrat() {
+		var num1 = document.getElementById('olola').value;
+		if (isNaN(num1/3)) {
+			var num1res = document.getElementById('ululu').value = 'укажите число!';
+		} else {
+		var num1res = document.getElementById('ululu').value = 'Квадрат равен: ' + num1 * num1;
+		}
+	}
+	function cube() {
+		var num1 = document.getElementById('olola').value;
+		if (isNaN(num1/3)) {
+			var num1res = document.getElementById('ululu').value = 'укажите число!';
+		} else {
+			var num1res = document.getElementById('ululu').value = 'Куб равен: ' + num1 * num1 * num1;
+		}
+	}
 
-if (c=='GCA') {a='Ala'}; if (c=='GCG') {a='Ala'};
-
-if (c=='CGU') {a='Arg'}; if (c=='CGC') {a='Arg'};
-
-if (c=='CGA') {a='Arg'}; if (c=='CGG') {a='Arg'};
-
-if (c=='AGA') {a='Arg'}; if (c=='AGG') {a='Arg'};
-
-if (c=='AAU') {a='Asn'}; if (c=='AAC') {a='Asn'};
-
-if (c=='GAU') {a='Asp'}; if (c=='GAC') {a='Asp'};
-
-if (c=='GUU') {a='Val'}; if (c=='GUC') {a='Val'};
-
-if (c=='GUA') {a='Val'}; if (c=='GUG') {a='Val'};
-
-if (c=='CAU') {a='His'}; if (c=='CAC') {a='His'};
-
-if (c=='GGU') {a='Gly'}; if (c=='GGC') {a='Gly'};
-
-if (c=='GGA') {a='Gly'}; if (c=='GGG') {a='Gly'};
-
-if (c=='CAA') {a='Gln'}; if (c=='CAG') {a='Gln'};
-
-if (c=='GAA') {a='Glu'}; if (c=='GAG') {a='Glu'};
-
-if (c=='AUU') {a='Ile'}; if (c=='AUC') {a='Ile'};
-
-if (c=='AUA') {a='Ile'}; if (c=='CUU') {a='Leu'};
-
-if (c=='CUC') {a='Leu'}; if (c=='CUA') {a='Leu'};
-
-if (c=='CUG') {a='Leu'}; if (c=='UUA') {a='Leu'};
-
-if (c=='UUG') {a='Leu'}; if (c=='AAA') {a='Lys'};
-
-if (c=='AAG') {a='Lys'}; if (c=='AUG') {a='Met'};
-
-if (c=='CCU') {a='Pro'}; if (c=='CCC') {a='Pro'};
-
-if (c=='CCA') {a='Pro'}; if (c=='CCG') {a='Pro'};
-
-if (c=='UCU') {a='Ser'}; if (c=='UCC') {a='Ser'};
-
-if (c=='UCA') {a='Ser'}; if (c=='UCG') {a='Ser'};
-
-if (c=='AGU') {a='Ser'}; if (c=='AGC') {a='Ser'};
-
-if (c=='UAU') {a='Tyr'}; if (c=='UAC') {a='Tyr'};
-
-if (c=='ACU') {a='Thr'}; if (c=='ACC') {a='Thr'};
-
-if (c=='ACA') {a='Thr'}; if (c=='ACG') {a='Thr'};
-
-if (c=='UGG') {a='Trp'}; if (c=='UUU') {a='Phe'};
-
-if (c=='UUC') {a='Phe'}; if (c=='UGU') {a='Cys'};
-
-if (c=='UGC') {a='Cys'}; if (c=='UGA') {a='Stop'};
-
-if (c=='UAG') {a='Stop'}; if (c=='UAA') {a='Stop'};
+	console.log(typeof(1) == typeof(3));
 </script>
 </body>
 </html>
