@@ -76,8 +76,17 @@
 	</div>
 	<input id='ululu' type="text">
 </div>
+
 <input id="num1" type='number'>
 <button>Прочитать</button>
+
+<h3 style='text-align: center;'>6.27</h3>
+<div style='width: 240px; margin: 0 auto;'>
+	<input id='nt' type="text">
+	<input id='nt-answer' type="text">
+	<button id='nt-btn' onclick="check()">Комплемент</button>
+</div>
+
 <script>
 	function squareNumber() {
         var number = document.getElementById("numberInput").value;
@@ -106,7 +115,28 @@
 		}
 	}
 
-	console.log(typeof(1) == typeof(3));
+	function check() {
+		var nt = document.getElementById('nt').value;
+		var answer = document.getElementById('nt-answer');
+		var btn = document.getElementById('nt-btn');
+
+		if (nt === 'A') {
+			answer.value = 'T';
+		} else
+		if (nt === 'T') {
+			answer.value = 'A';
+		} else 
+		if (nt === 'C') {
+			answer.value = 'G';
+		} else
+		if (nt === 'G') {
+			answer.value = 'C';
+		} else
+		if (nt === 'U') {
+			answer.value = 'A';
+		}
+	}
 </script>
+
 </body>
 </html>
